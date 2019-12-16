@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{ partial "head.html" . }}
+
+</head>
+<body>
+{{ partial "navbar.html" . }}
+
+<div style="background:url('/pic/buis-baro-couverture.jpg');
+    background-size:cover;
+    position: relative;
+    min-width: 100%;
+    min-height: 100%;
+    height: 75vh;
+    min-height: 25rem;
+    width: 100%;">
+    <div class="content">
+    <h1>Associations</h1>
+    </div>
+</div>
+<section>
+  <div class="container py-3">
+    <div class="card">
+      <div class="row ">
+        <div class="col-md-4">
+            <img src="{{ .Params.photo }}" class="w-100" style="height: 100%;">
+          </div>
+          <div class="col-md-8 px-3">
+            <div class="card-block px-3">
+              <h4 class="card-title">{{ .Title }}</h4>
+                <h9 style="text-decoration: underline; text-decoration: dimgray">Adresse: {{ .Params.address }}</h9>
+              <p class="card-text">{{ .Content }}</p>
+              <p class="card-text">Merci de nous contacter ou de vous rendre sur les lieux pour plus d'informations</p>
+              <a href="/associations" class="btn btn-outline-success my-2 my-sm-0">Retour Associations</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<footer>
+    {{ partial "footer.html" . }}
+</footer>
+
+</body>
+
+</html>

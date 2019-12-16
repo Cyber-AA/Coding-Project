@@ -1,0 +1,1 @@
+---title: "La Chorale de Féfé"address: "23 rue des déportés"domain: "Musique"photo: "http://mtff.free.fr/IMG/siteon0.jpg"description: ""---Heureux de Vivre ? Venez hurler avec nous !Répétition tous les jeudis après-midi à l'ancien tribunal. Concerts divers.COTISATIONInscription 25€ / an puis 30€ par trimestre PRÉSIDENTEFéfé TATAIS

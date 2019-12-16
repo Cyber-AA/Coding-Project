@@ -1,0 +1,2 @@
+
+• 'firstNames' (required) : The first name (s) of the member• 'lastName' (mandatory) : The last name of the member• 'role' (mandatory) : The role of the member on the municipal council (default : “Deputy”)• 'photo' (optional) : A photo of the member (if not specified, a default photo will be displayed)

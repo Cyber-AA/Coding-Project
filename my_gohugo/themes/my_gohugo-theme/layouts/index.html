@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{ partial "head.html" . }}
+
+</head>
+<body>
+<div style="margin:0; width:100vw">
+  <nav>
+
+      {{ partial "navbar.html" . }}
+  </nav>
+  <header>
+      {{ partial "video.html" . }}
+  </header>
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+<div class="container">
+   <h3 class="pb-3 mb-4 font-italic border-bottom">
+      Quoi de beau dans notre commune ?
+   </h3>
+{{ $evt := .Site.GetPage "/events" }}
+<section>
+{{ range first 10 ($evt.Data.Pages.ByParam "when").Reverse }}
+  <div class="container py-3">
+    <div class="card">
+      <div class="row ">
+        <div class="col-md-4">
+            <a href="{{.Permalink}}"><img src="{{ .Params.photo }}" class="w-100"></a>
+          </div>
+          <div class="col-md-8 px-8">
+            <div class="card-block px-6">
+                <a href="{{.Permalink}}"><h4 class="titi" class="titi:hover">{{ .Title }}</h4></a>
+                <p>{{ printf "%s %s %s %s" (string (time .Params.when).Weekday) (string (time .Params.when).Day) (string (time .Params.when).Month) (string (time .Params.when).Year) }}</p>
+              <p class="card-text">{{ .Summary}}</p>
+              <strong class="card-text">{{ .Params.description }}</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+{{ end }}
+</section>
+</div>
+
+
+
+
+
+
+
+
+   <hr>
+</div>
+  <footer>
+
+        {{ partial "footer.html" . }}
+
+  </footer>
+</div>
+</body>
+
+
+</html>
